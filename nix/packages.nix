@@ -12,7 +12,7 @@
         src = inputs.self;
         filter = path: type:
           !(pkgs.lib.hasInfix "/.git/" path) &&
-          !(pkgs.hasSuffix ".pyc" path) &&
+          !(pkgs.lib.hasSuffix ".pyc" path) &&
           !(pkgs.lib.hasInfix "/__pycache__/" path) &&
           !(pkgs.lib.hasInfix "/.venv/" path) &&
           !(pkgs.lib.hasInfix "/node_modules/" path);
